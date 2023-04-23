@@ -15,8 +15,8 @@ def _create_database():
     :return:
     """
 
-    if not os.path.exists('Cookie_Profile'):
-        with sqlite3.connect('Cookie_Profile') as conn:
+    if not os.path.exists('../Cookie_Profile'):
+        with sqlite3.connect('../Cookie_Profile') as conn:
             conn.execute(
                 '''CREATE TABLE Cookie_Profile (
                 id INTEGER PRIMARY KEY NOT NULL, 
@@ -33,7 +33,7 @@ def _create_database():
                     (now,)
                 )
     else:
-        conn = sqlite3.connect('Cookie_Profile')
+        conn = sqlite3.connect('../Cookie_Profile')
 
     return conn
 

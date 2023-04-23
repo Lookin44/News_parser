@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   main_app:
-    build: .
+    build: app/.
     volumes:
-      - ./:/usr/src/main_app
+      - ./app/:/usr/src/main_app
     shm_size: '1gb'
